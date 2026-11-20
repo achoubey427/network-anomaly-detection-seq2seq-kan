@@ -1,0 +1,14 @@
+data/
+data/**
+*.npz
+*.csv
+*.zip
+*.log
+.git/
+node_modules/
+frontend/node_modules/
+models/
+*.pt
+research_results/experiments/**
+tests/
+scratch/

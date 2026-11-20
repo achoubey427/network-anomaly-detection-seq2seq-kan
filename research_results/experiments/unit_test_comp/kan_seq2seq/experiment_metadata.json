@@ -1,0 +1,17 @@
+{
+  "experiment_id": "unit_test_comp_kan_seq2seq",
+  "dataset_id": "unit_test_comp",
+  "model_name": "kan_seq2seq",
+  "status": "COMPLETED",
+  "timestamp": "2026-10-08T01:38:11.031361",
+  "execution_duration_sec": 1.372748851776123,
+  "device": "cpu",
+  "python_version": "3.13.1",
+  "pytorch_version": "2.14.1+cpu",
+  "random_seed": 42,
+  "total_parameters": 175184,
+  "trainable_parameters": 175184,
+  "input_dimension": 16,
+  "sequence_length": 30,
+  "is_smoke_test": true
+}

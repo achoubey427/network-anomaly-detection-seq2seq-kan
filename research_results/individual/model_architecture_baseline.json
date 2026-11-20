@@ -1,0 +1,44 @@
+{
+  "model_class": "BaselineSeq2SeqAutoencoder",
+  "input_dimension": 16,
+  "hidden_dimension": 64,
+  "latent_dimension": 32,
+  "num_layers": 2,
+  "bidirectional": false,
+  "total_parameters": 138416,
+  "trainable_parameters": 138416,
+  "non_trainable_parameters": 0,
+  "estimated_model_size_mb": 0.528,
+  "layers": [
+    {
+      "layer_name": "encoder_lstm",
+      "layer_type": "LSTM",
+      "parameters": 54272
+    },
+    {
+      "layer_name": "attention",
+      "layer_type": "BahdanauAttention",
+      "parameters": 8256
+    },
+    {
+      "layer_name": "encoder_bottleneck",
+      "layer_type": "Linear",
+      "parameters": 2080
+    },
+    {
+      "layer_name": "decoder_bottleneck",
+      "layer_type": "Linear",
+      "parameters": 2112
+    },
+    {
+      "layer_name": "decoder_lstm",
+      "layer_type": "LSTM",
+      "parameters": 70656
+    },
+    {
+      "layer_name": "reconstruction_head",
+      "layer_type": "Linear",
+      "parameters": 1040
+    }
+  ]
+}

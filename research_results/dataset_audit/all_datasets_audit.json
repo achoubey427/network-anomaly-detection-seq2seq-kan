@@ -1,0 +1,285 @@
+[
+  {
+    "dataset_id": "CICIDS2017",
+    "status": "READY",
+    "found": true,
+    "raw_dir": "data\\raw\\CICIDS2017",
+    "files_count": 8,
+    "files": [
+      {
+        "filename": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+        "size_mb": 73.55,
+        "rows": 225745
+      },
+      {
+        "filename": "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+        "size_mb": 73.34,
+        "rows": 286467
+      },
+      {
+        "filename": "Friday-WorkingHours-Morning.pcap_ISCX.csv",
+        "size_mb": 55.62,
+        "rows": 191033
+      },
+      {
+        "filename": "Monday-WorkingHours.pcap_ISCX.csv",
+        "size_mb": 168.73,
+        "rows": 529918
+      },
+      {
+        "filename": "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv",
+        "size_mb": 79.25,
+        "rows": 288602
+      },
+      {
+        "filename": "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+        "size_mb": 49.61,
+        "rows": 170366
+      },
+      {
+        "filename": "Tuesday-WorkingHours.pcap_ISCX.csv",
+        "size_mb": 128.82,
+        "rows": 445909
+      },
+      {
+        "filename": "Wednesday-workingHours.pcap_ISCX.csv",
+        "size_mb": 214.74,
+        "rows": 692703
+      }
+    ],
+    "row_count": 2830743,
+    "column_count": 79,
+    "columns": [
+      "Destination Port",
+      "Flow Duration",
+      "Total Fwd Packets",
+      "Total Backward Packets",
+      "Total Length of Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Std",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Std",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Total",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Total",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Fwd PSH Flags",
+      "Bwd PSH Flags",
+      "Fwd URG Flags",
+      "Bwd URG Flags",
+      "Fwd Header Length",
+      "Bwd Header Length",
+      "Fwd Packets/s",
+      "Bwd Packets/s",
+      "Min Packet Length",
+      "Max Packet Length",
+      "Packet Length Mean",
+      "Packet Length Std",
+      "Packet Length Variance",
+      "FIN Flag Count",
+      "SYN Flag Count",
+      "RST Flag Count",
+      "PSH Flag Count",
+      "ACK Flag Count",
+      "URG Flag Count",
+      "CWE Flag Count",
+      "ECE Flag Count",
+      "Down/Up Ratio",
+      "Average Packet Size",
+      "Avg Fwd Segment Size",
+      "Avg Bwd Segment Size",
+      "Fwd Header Length",
+      "Fwd Avg Bytes/Bulk",
+      "Fwd Avg Packets/Bulk",
+      "Fwd Avg Bulk Rate",
+      "Bwd Avg Bytes/Bulk",
+      "Bwd Avg Packets/Bulk",
+      "Bwd Avg Bulk Rate",
+      "Subflow Fwd Packets",
+      "Subflow Fwd Bytes",
+      "Subflow Bwd Packets",
+      "Subflow Bwd Bytes",
+      "Init_Win_bytes_forward",
+      "Init_Win_bytes_backward",
+      "act_data_pkt_fwd",
+      "min_seg_size_forward",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min",
+      "Label"
+    ],
+    "retained_feature_count": 78,
+    "retained_features": [
+      "destination_port",
+      "flow_duration",
+      "total_fwd_packets",
+      "total_bwd_packets",
+      "total_fwd_bytes",
+      "total_bwd_bytes",
+      "fwd_packet_length_max",
+      "fwd_packet_length_min",
+      "fwd_packet_length_mean",
+      "fwd_packet_length_std",
+      "bwd_packet_length_max",
+      "bwd_packet_length_min",
+      "bwd_packet_length_mean",
+      "bwd_packet_length_std",
+      "flow_bytes_per_sec",
+      "flow_packets_per_sec",
+      "flow_iat_mean",
+      "flow_iat_std",
+      "flow_iat_max",
+      "flow_iat_min",
+      "fwd_iat_tot",
+      "fwd_iat_mean",
+      "fwd_iat_std",
+      "fwd_iat_max",
+      "fwd_iat_min",
+      "bwd_iat_tot",
+      "bwd_iat_mean",
+      "bwd_iat_std",
+      "bwd_iat_max",
+      "bwd_iat_min",
+      "fwd_psh_flags",
+      "bwd_psh_flags",
+      "fwd_urg_flags",
+      "bwd_urg_flags",
+      "fwd_header_length",
+      "bwd_header_length",
+      "fwd_packets_per_sec",
+      "bwd_packets_per_sec",
+      "packet_length_min",
+      "packet_length_max",
+      "packet_length_mean",
+      "packet_length_std",
+      "packet_length_variance",
+      "fin_flag_count",
+      "syn_flag_count",
+      "rst_flag_count",
+      "psh_flag_count",
+      "ack_flag_count",
+      "urg_flag_count",
+      "cwe_flag_count",
+      "ece_flag_count",
+      "down_up_ratio",
+      "avg_packet_size",
+      "avg_fwd_segment_size",
+      "avg_bwd_segment_size",
+      "fwd_header_length",
+      "fwd_avg_bytes_per_bulk",
+      "fwd_avg_packets_per_bulk",
+      "fwd_avg_bulk_rate",
+      "bwd_avg_bytes_per_bulk",
+      "bwd_avg_packets_per_bulk",
+      "bwd_avg_bulk_rate",
+      "subflow_fwd_packets",
+      "subflow_fwd_bytes",
+      "subflow_bwd_packets",
+      "subflow_bwd_bytes",
+      "init_fwd_win_bytes",
+      "init_bwd_win_bytes",
+      "act_data_pkt_fwd",
+      "min_seg_size_forward",
+      "active_mean",
+      "active_std",
+      "active_max",
+      "active_min",
+      "idle_mean",
+      "idle_std",
+      "idle_max",
+      "idle_min"
+    ],
+    "discarded_columns": [
+      "Label"
+    ],
+    "missing_values_count": 1358,
+    "infinite_values_count": 4376,
+    "unique_classes": 15,
+    "class_distribution": {
+      "BENIGN": {
+        "count": 2273097,
+        "percentage": 80.3
+      },
+      "DDoS": {
+        "count": 128027,
+        "percentage": 4.52
+      },
+      "PortScan": {
+        "count": 158930,
+        "percentage": 5.61
+      },
+      "Bot": {
+        "count": 1966,
+        "percentage": 0.07
+      },
+      "Infiltration": {
+        "count": 36,
+        "percentage": 0.0
+      },
+      "Web Attack \ufffd Brute Force": {
+        "count": 1507,
+        "percentage": 0.05
+      },
+      "Web Attack \ufffd XSS": {
+        "count": 652,
+        "percentage": 0.02
+      },
+      "Web Attack \ufffd Sql Injection": {
+        "count": 21,
+        "percentage": 0.0
+      },
+      "FTP-Patator": {
+        "count": 7938,
+        "percentage": 0.28
+      },
+      "SSH-Patator": {
+        "count": 5897,
+        "percentage": 0.21
+      },
+      "DoS slowloris": {
+        "count": 5796,
+        "percentage": 0.2
+      },
+      "DoS Slowhttptest": {
+        "count": 5499,
+        "percentage": 0.19
+      },
+      "DoS Hulk": {
+        "count": 231073,
+        "percentage": 8.16
+      },
+      "DoS GoldenEye": {
+        "count": 10293,
+        "percentage": 0.36
+      },
+      "Heartbleed": {
+        "count": 11,
+        "percentage": 0.0
+      }
+    },
+    "validation_status": "READY",
+    "validation_reason": "Dataset verified: 8 files found, compatible schema."
+  }
+]

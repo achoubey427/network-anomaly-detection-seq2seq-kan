@@ -1,0 +1,29 @@
+{
+  "experiment_id": "CICIDS2017_kan_seq2seq",
+  "dataset": "CICIDS2017",
+  "model_architecture": "kan_seq2seq",
+  "device": "cpu",
+  "threshold": 0.09308541566133499,
+  "convergence_epoch": 3,
+  "total_parameters": 210958,
+  "trainable_parameters": 210958,
+  "mean_latency_ms": 27.726112000309513,
+  "throughput_seq_per_sec": 36.06708362098648,
+  "test_metrics": {
+    "accuracy": 0.9985538752140335,
+    "precision": 0.9985585789284024,
+    "recall": 0.9999952826962222,
+    "f1_score": 0.9992764144094882,
+    "specificity": 0.0,
+    "fpr": 1.0,
+    "fnr": 4.71730377785273e-06,
+    "tp": 423969,
+    "tn": 0,
+    "fp": 612,
+    "fn": 2,
+    "roc_auc": 0.7790687041842471,
+    "pr_auc": 0.999564614917503,
+    "threshold_applied": 0.09308541566133499
+  },
+  "training_mode": "time_bounded_checkpoint_epoch_3"
+}

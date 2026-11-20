@@ -1,0 +1,17 @@
+{
+  "experiment_id": "CSECICIDS2018_kan_seq2seq",
+  "dataset_id": "CSECICIDS2018",
+  "model_name": "kan_seq2seq",
+  "status": "COMPLETED",
+  "timestamp": "2026-10-06T09:59:35.313395",
+  "execution_duration_sec": 3296.1404201984406,
+  "device": "cpu",
+  "python_version": "3.13.1",
+  "pytorch_version": "2.14.1+cpu",
+  "random_seed": 42,
+  "total_parameters": 210958,
+  "trainable_parameters": 210958,
+  "input_dimension": 78,
+  "sequence_length": 30,
+  "is_smoke_test": false
+}

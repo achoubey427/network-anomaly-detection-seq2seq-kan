@@ -1,0 +1,53 @@
+# Default configuration for ICS Modbus/TCP Real-Time Anomaly Detection
+version: "1.0.0"
+project: "Real-Time Network-Based Anomaly Detection in Industrial Control Systems"
+
+# Pipeline & Live Streaming Configuration
+pipeline:
+  mode: "replay" # "replay", "live_capture", "api_stream"
+  packet_window_size: 30
+  stride: 1
+  buffer_timeout_seconds: 10
+  sqlite_db_path: "data/alerts.db"
+
+# Modbus Feature Extraction
+features:
+  numerical:
+    - "transaction_id"
+    - "packet_length"
+    - "register_address"
+    - "register_value"
+    - "inter_arrival_ms"
+  categorical:
+    - "src_ip"
+    - "dst_ip"
+    - "function_code"
+    - "unit_id"
+    - "protocol_id"
+    - "direction"
+
+# Model Hyperparameters
+model:
+  name: "Seq2SeqAutoencoder"
+  hidden_size: 64
+  num_layers: 2
+  embedding_dim: 8
+  latent_dim: 32
+  dropout: 0.2
+  attention: true
+  teacher_forcing_ratio: 0.5
+  checkpoint_path: "checkpoints/best_model.pt"
+
+# Anomaly Scoring & Thresholding
+scoring:
+  method: "mean"
+  threshold: 0.4388 # Derived from precision-recall optimization on validation set
+  fallback_method: "statistical"
+  statistical_k: 3.0
+
+# Server & Dashboard Settings
+server:
+  host: "0.0.0.0"
+  port: 8000
+  ws_endpoint: "/ws/stream"
+  api_prefix: "/api/v1"

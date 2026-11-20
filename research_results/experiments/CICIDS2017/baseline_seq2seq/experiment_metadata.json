@@ -1,0 +1,17 @@
+{
+  "experiment_id": "CICIDS2017_baseline_seq2seq",
+  "dataset_id": "CICIDS2017",
+  "model_name": "baseline_seq2seq",
+  "status": "COMPLETED",
+  "timestamp": "2026-10-07T16:43:08.515623",
+  "execution_duration_sec": 13835.372299671173,
+  "device": "cpu",
+  "python_version": "3.13.1",
+  "pytorch_version": "2.14.1+cpu",
+  "random_seed": 42,
+  "total_parameters": 174190,
+  "trainable_parameters": 174190,
+  "input_dimension": 78,
+  "sequence_length": 30,
+  "is_smoke_test": false
+}

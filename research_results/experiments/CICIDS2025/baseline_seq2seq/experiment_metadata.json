@@ -1,0 +1,8 @@
+{
+  "experiment_id": "CICIDS2025_baseline_seq2seq",
+  "dataset_id": "CICIDS2025",
+  "model_name": "baseline_seq2seq",
+  "status": "DATASET_MISSING",
+  "reason": "Dataset not found in data\\raw\\CICIDS2025 \u2014 no experiment will be executed.",
+  "timestamp": "2026-10-05T01:01:53.413011"
+}

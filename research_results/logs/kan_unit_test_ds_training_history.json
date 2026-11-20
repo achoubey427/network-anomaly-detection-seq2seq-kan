@@ -1,0 +1,31 @@
+{
+  "dataset": "unit_test_ds",
+  "model_type": "KANSeq2SeqAutoencoder",
+  "model_architecture": "kan_seq2seq",
+  "device": "cpu",
+  "random_seed": 42,
+  "is_smoke_test": true,
+  "train_loss": [
+    1.0169144868850708,
+    1.0138020157814025
+  ],
+  "val_loss": [
+    0.993661105632782,
+    0.9920037984848022
+  ],
+  "learning_rates": [
+    0.001,
+    0.001
+  ],
+  "teacher_forcing_ratios": [
+    1.0,
+    0.95
+  ],
+  "epoch_times_sec": [
+    0.2849400043487549,
+    0.2817692756652832
+  ],
+  "best_epoch": 2,
+  "best_val_loss": 0.9920037984848022,
+  "total_duration_sec": 0.8124489784240723
+}

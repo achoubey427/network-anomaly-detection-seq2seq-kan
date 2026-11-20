@@ -1,0 +1,11 @@
+{
+  "dataset_id": "CICIDS2019",
+  "status": "MISSING",
+  "found": false,
+  "message": "Raw files not found in data\\raw\\CICIDS2019. No experiment will be executed.",
+  "files": [],
+  "row_count": 0,
+  "column_count": 0,
+  "validation_status": "MISSING",
+  "validation_reason": "Dataset not found in data\\raw\\CICIDS2019 \u2014 no experiment will be executed."
+}

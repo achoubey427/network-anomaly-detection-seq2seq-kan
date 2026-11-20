@@ -1,0 +1,75 @@
+{
+  "baseline_model": "BaselineSeq2SeqAutoencoder",
+  "proposed_kan_model": "KANSeq2SeqAutoencoder",
+  "input_dimension": 16,
+  "hidden_dimension": 64,
+  "latent_dimension": 32,
+  "baseline_total_parameters": 138416,
+  "kan_total_parameters": 175184,
+  "parameter_difference": 36768,
+  "parameter_increase_percentage": 26.56,
+  "baseline_layers": [
+    {
+      "layer_name": "encoder_lstm",
+      "layer_type": "LSTM",
+      "parameters": 54272
+    },
+    {
+      "layer_name": "attention",
+      "layer_type": "BahdanauAttention",
+      "parameters": 8256
+    },
+    {
+      "layer_name": "encoder_bottleneck",
+      "layer_type": "Linear",
+      "parameters": 2080
+    },
+    {
+      "layer_name": "decoder_bottleneck",
+      "layer_type": "Linear",
+      "parameters": 2112
+    },
+    {
+      "layer_name": "decoder_lstm",
+      "layer_type": "LSTM",
+      "parameters": 70656
+    },
+    {
+      "layer_name": "reconstruction_head",
+      "layer_type": "Linear",
+      "parameters": 1040
+    }
+  ],
+  "kan_layers": [
+    {
+      "layer_name": "encoder_lstm",
+      "layer_type": "LSTM",
+      "parameters": 54272
+    },
+    {
+      "layer_name": "attention",
+      "layer_type": "BahdanauAttention",
+      "parameters": 8256
+    },
+    {
+      "layer_name": "kan_encoder_bottleneck",
+      "layer_type": "KANLinear",
+      "parameters": 20480
+    },
+    {
+      "layer_name": "kan_decoder_bottleneck",
+      "layer_type": "KANLinear",
+      "parameters": 20480
+    },
+    {
+      "layer_name": "decoder_lstm",
+      "layer_type": "LSTM",
+      "parameters": 70656
+    },
+    {
+      "layer_name": "reconstruction_head",
+      "layer_type": "Linear",
+      "parameters": 1040
+    }
+  ]
+}

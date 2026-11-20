@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETED",
+  "dataset_id": "CICIDS2017",
+  "model_name": "kan_seq2seq",
+  "total_parameters": 210958,
+  "device": "cpu",
+  "execution_duration_sec": 4200.0,
+  "timestamp": "2026-10-08T00:18:38",
+  "evaluation_timestamp": "2026-10-08T00:18:38",
+  "training_protocol": "time_bounded_checkpoint_epoch_3",
+  "epoch": 3,
+  "test_samples": 424583,
+  "normal_samples": 612,
+  "anomaly_samples": 423971
+}

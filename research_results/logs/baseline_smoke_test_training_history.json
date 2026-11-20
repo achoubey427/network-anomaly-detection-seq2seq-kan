@@ -1,0 +1,36 @@
+{
+  "dataset": "smoke_test",
+  "model_type": "BaselineSeq2SeqAutoencoder",
+  "model_architecture": "baseline_seq2seq",
+  "device": "cpu",
+  "random_seed": 42,
+  "is_smoke_test": true,
+  "train_loss": [
+    1.0089481472969055,
+    1.0061748504638672,
+    1.0044904112815858
+  ],
+  "val_loss": [
+    1.9691153526306153,
+    1.9617149353027343,
+    1.9572444915771485
+  ],
+  "learning_rates": [
+    0.001,
+    0.001,
+    0.001
+  ],
+  "teacher_forcing_ratios": [
+    1.0,
+    0.95,
+    0.9025
+  ],
+  "epoch_times_sec": [
+    0.46816563606262207,
+    0.3211398124694824,
+    0.32543516159057617
+  ],
+  "best_epoch": 3,
+  "best_val_loss": 1.9572444915771485,
+  "total_duration_sec": 1.1397018432617188
+}

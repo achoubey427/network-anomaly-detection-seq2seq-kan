@@ -1,0 +1,31 @@
+{
+  "dataset": "CICIDS2019",
+  "model_type": "BaselineSeq2SeqAutoencoder",
+  "model_architecture": "baseline_seq2seq",
+  "device": "cpu",
+  "random_seed": 42,
+  "is_smoke_test": false,
+  "train_loss": [
+    2.499392018087088,
+    2.4052874679177796
+  ],
+  "val_loss": [
+    4.0934085431566585,
+    4.1187400327947765
+  ],
+  "learning_rates": [
+    0.001,
+    0.001
+  ],
+  "teacher_forcing_ratios": [
+    1.0,
+    0.95
+  ],
+  "epoch_times_sec": [
+    124.83727073669434,
+    128.83561182022095
+  ],
+  "best_epoch": 1,
+  "best_val_loss": 4.0934085431566585,
+  "total_duration_sec": 253.91326308250427
+}

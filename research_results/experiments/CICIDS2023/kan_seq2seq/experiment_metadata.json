@@ -1,0 +1,8 @@
+{
+  "experiment_id": "CICIDS2023_kan_seq2seq",
+  "dataset_id": "CICIDS2023",
+  "model_name": "kan_seq2seq",
+  "status": "DATASET_MISSING",
+  "reason": "Dataset not found in data\\raw\\CICIDS2023 \u2014 no experiment will be executed.",
+  "timestamp": "2026-10-05T01:01:53.410108"
+}

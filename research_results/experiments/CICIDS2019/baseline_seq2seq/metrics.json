@@ -1,0 +1,21 @@
+{
+  "accuracy": 1.0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1_score": 1.0,
+  "specificity": 0.0,
+  "fpr": 0.0,
+  "fnr": 0.0,
+  "tp": 269971,
+  "tn": 0,
+  "fp": 0,
+  "fn": 0,
+  "roc_auc": 0.5,
+  "pr_auc": 1.0,
+  "threshold_applied": 3.056586980819702,
+  "mean_latency_ms": 18.39599399997951,
+  "median_latency_ms": 17.957349999733196,
+  "p95_latency_ms": 19.934039999861852,
+  "p99_latency_ms": 21.404295000006847,
+  "throughput_seq_per_sec": 54.359661130630606
+}

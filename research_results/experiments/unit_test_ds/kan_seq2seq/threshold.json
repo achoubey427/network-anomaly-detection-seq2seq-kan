@@ -1,0 +1,10 @@
+{
+  "optimal_threshold": 0.9800208704266137,
+  "validation_f1": 0.8571428571428571,
+  "validation_precision": 0.75,
+  "validation_recall": 1.0,
+  "validation_accuracy": 0.9,
+  "validation_samples": 10,
+  "search_method": "f1_optimal",
+  "search_steps": 500
+}

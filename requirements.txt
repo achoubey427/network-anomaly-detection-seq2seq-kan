@@ -1,0 +1,2 @@
+# Minimal requirements for Vercel Cloud Serverless Deployment
+# Full local environment requirements are in requirements-local.txt

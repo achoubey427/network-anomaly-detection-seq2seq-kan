@@ -1,0 +1,31 @@
+{
+  "dataset": "CICIDS2019",
+  "model_type": "KANSeq2SeqAutoencoder",
+  "model_architecture": "kan_seq2seq",
+  "device": "cpu",
+  "random_seed": 42,
+  "is_smoke_test": false,
+  "train_loss": [
+    2.512165911810171,
+    2.389198574813596
+  ],
+  "val_loss": [
+    4.106153264904768,
+    4.13785794598782
+  ],
+  "learning_rates": [
+    0.001,
+    0.001
+  ],
+  "teacher_forcing_ratios": [
+    1.0,
+    0.95
+  ],
+  "epoch_times_sec": [
+    130.22918057441711,
+    128.87380647659302
+  ],
+  "best_epoch": 1,
+  "best_val_loss": 4.106153264904768,
+  "total_duration_sec": 259.3564381599426
+}

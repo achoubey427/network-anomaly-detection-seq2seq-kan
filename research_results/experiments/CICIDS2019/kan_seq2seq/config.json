@@ -1,0 +1,280 @@
+{
+  "version": "1.0.0",
+  "project": "Real-Time Network-Based Anomaly Detection in Industrial Control Systems",
+  "reproducibility": {
+    "seed": 42,
+    "deterministic": true,
+    "benchmark_cudnn": false
+  },
+  "experiments": {
+    "models": [
+      {
+        "name": "baseline_seq2seq",
+        "display_name": "Seq2Seq LSTM-Attention (Baseline)",
+        "type": "baseline",
+        "enable_kan": false
+      },
+      {
+        "name": "kan_seq2seq",
+        "display_name": "Seq2Seq LSTM-Attention + KAN Bottleneck",
+        "type": "kan",
+        "enable_kan": true
+      }
+    ],
+    "datasets": [
+      {
+        "id": "CICIDS2017",
+        "display_name": "CIC-IDS2017 / ISCX Benchmark",
+        "raw_dir": "data/raw/CICIDS2017",
+        "processed_dir": "data/processed/CICIDS2017",
+        "adapter": "cicids2017_adapter",
+        "label_column": "Label",
+        "normal_labels": [
+          "BENIGN",
+          "Benign",
+          "0"
+        ],
+        "features": {
+          "numerical": [
+            "Flow Duration",
+            "Total Fwd Packets",
+            "Total Backward Packets",
+            "Total Length of Fwd Packets",
+            "Total Length of Bwd Packets",
+            "Fwd Packet Length Max",
+            "Fwd Packet Length Min",
+            "Fwd Packet Length Mean",
+            "Fwd Packet Length Std",
+            "Bwd Packet Length Max",
+            "Bwd Packet Length Min",
+            "Bwd Packet Length Mean",
+            "Bwd Packet Length Std",
+            "Flow Bytes/s",
+            "Flow Packets/s",
+            "Flow IAT Mean",
+            "Flow IAT Std",
+            "Flow IAT Max",
+            "Flow IAT Min"
+          ],
+          "categorical": [
+            "Protocol"
+          ]
+        }
+      },
+      {
+        "id": "CICIDS2019",
+        "display_name": "CIC-DDoS2019 / DDoS Benchmark",
+        "raw_dir": "data/raw/CICIDS2019",
+        "processed_dir": "data/processed/CICIDS2019",
+        "adapter": "cicids2019_adapter",
+        "label_column": "Label",
+        "normal_labels": [
+          "BENIGN",
+          "Benign",
+          "0"
+        ],
+        "features": {
+          "numerical": [
+            "Flow Duration",
+            "Tot Fwd Pkts",
+            "Tot Bwd Pkts",
+            "TotLen Fwd Pkts",
+            "TotLen Bwd Pkts",
+            "Fwd Pkt Len Max",
+            "Fwd Pkt Len Min",
+            "Fwd Pkt Len Mean",
+            "Fwd Pkt Len Std",
+            "Bwd Pkt Len Max",
+            "Bwd Pkt Len Min",
+            "Bwd Pkt Len Mean",
+            "Bwd Pkt Len Std",
+            "Flow Byts/s",
+            "Flow Pkts/s",
+            "Flow IAT Mean",
+            "Flow IAT Std"
+          ],
+          "categorical": [
+            "Protocol"
+          ]
+        }
+      },
+      {
+        "id": "CICIDS2023",
+        "display_name": "CICIoT2023 / IoT Network Benchmark",
+        "raw_dir": "data/raw/CICIDS2023",
+        "processed_dir": "data/processed/CICIDS2023",
+        "adapter": "cicids2023_adapter",
+        "label_column": "label",
+        "normal_labels": [
+          "BenignTraffic",
+          "BENIGN",
+          "Benign",
+          "0"
+        ],
+        "features": {
+          "numerical": [
+            "flow_duration",
+            "Header_Length",
+            "Duration",
+            "Rate",
+            "Srate",
+            "Drate",
+            "Min",
+            "Max",
+            "AVG",
+            "Std",
+            "Tot sum",
+            "Tot size",
+            "IAT",
+            "Number",
+            "Magnitue",
+            "Radius",
+            "Covariance",
+            "Variance",
+            "Weight"
+          ],
+          "categorical": [
+            "Protocol Type"
+          ]
+        }
+      },
+      {
+        "id": "CSECICIDS2018",
+        "display_name": "CSE-CIC-IDS2018 / Enterprise Flow Benchmark",
+        "raw_dir": "data/raw/CSECICIDS2018",
+        "processed_dir": "data/processed/CSECICIDS2018",
+        "adapter": "csecicids2018_adapter",
+        "label_column": "Label",
+        "normal_labels": [
+          "BENIGN",
+          "Benign",
+          "0"
+        ],
+        "features": {
+          "numerical": [
+            "Flow Duration",
+            "Tot Fwd Pkts",
+            "Tot Bwd Pkts",
+            "TotLen Fwd Pkts",
+            "TotLen Bwd Pkts",
+            "Fwd Pkt Len Max",
+            "Fwd Pkt Len Min",
+            "Fwd Pkt Len Mean",
+            "Fwd Pkt Len Std",
+            "Bwd Pkt Len Max",
+            "Bwd Pkt Len Min",
+            "Bwd Pkt Len Mean",
+            "Bwd Pkt Len Std",
+            "Flow Byts/s",
+            "Flow Pkts/s",
+            "Flow IAT Mean",
+            "Flow IAT Std"
+          ],
+          "categorical": [
+            "Protocol"
+          ]
+        }
+      }
+    ]
+  },
+  "preprocessing": {
+    "train_ratio": 0.7,
+    "val_ratio": 0.15,
+    "test_ratio": 0.15,
+    "window_size": 30,
+    "stride_train": 5,
+    "stride_eval": 1,
+    "max_samples_per_file": 100000,
+    "scaler": "robust",
+    "handle_missing": "median",
+    "handle_infinite": "percentile_99_9",
+    "outlier_clip": [
+      -5.0,
+      5.0
+    ]
+  },
+  "model": {
+    "input_dim": 16,
+    "hidden_dim": 64,
+    "latent_dim": 32,
+    "num_layers": 2,
+    "dropout": 0.2,
+    "bidirectional_encoder": false,
+    "embedding_dim": 8,
+    "attention_type": "bahdanau"
+  },
+  "kan": {
+    "grid_size": 5,
+    "spline_order": 3,
+    "grid_range": [
+      -1.0,
+      1.0
+    ],
+    "base_activation": "silu",
+    "grid_eps": 0.02
+  },
+  "training": {
+    "batch_size": 64,
+    "epochs": 3,
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05,
+    "lr_scheduler": {
+      "type": "reduce_on_plateau",
+      "factor": 0.5,
+      "patience": 1,
+      "min_lr": 1e-06
+    },
+    "early_stopping": {
+      "patience": 1,
+      "min_delta": 0.0001
+    },
+    "teacher_forcing": {
+      "initial_ratio": 1.0,
+      "decay_rate": 0.95,
+      "min_ratio": 0.2
+    },
+    "loss_weights": {
+      "numerical_mse": 1.0,
+      "categorical_ce": 0.5
+    }
+  },
+  "thresholding": {
+    "primary_method": "f1_optimal",
+    "score_aggregation": "mean",
+    "tail_k": 5,
+    "search_steps": 500,
+    "statistical_fallback_k": 3.0,
+    "percentile_fallback": 99.0
+  },
+  "evaluation": {
+    "metrics": [
+      "accuracy",
+      "precision",
+      "recall",
+      "f1_score",
+      "specificity",
+      "fpr",
+      "fnr",
+      "roc_auc",
+      "pr_auc",
+      "tp",
+      "tn",
+      "fp",
+      "fn",
+      "mean_latency_ms",
+      "p95_latency_ms",
+      "p99_latency_ms",
+      "throughput_seq_per_sec"
+    ],
+    "benchmark_latency_samples": 1000
+  },
+  "output": {
+    "results_dir": "research_results",
+    "individual_dir": "research_results/individual",
+    "comparisons_dir": "research_results/comparisons",
+    "figures_dir": "research_results/figures",
+    "tables_dir": "research_results/tables",
+    "logs_dir": "research_results/logs",
+    "report_file": "research_results/final_research_report.md"
+  }
+}
